@@ -1,0 +1,22 @@
+h1 {
+    color: brown;
+    
+}
+body {
+    background-color: beige;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+p {
+    background-color: beige;
+    text-decoration-color: brown;
+}
+#sec6 ul li {
+    text-decoration-color: brown;
+    
+}
+footer {
+background-color: brown;
+text-decoration-color: beige;
+}
