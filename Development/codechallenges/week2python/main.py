@@ -2,26 +2,32 @@ from customer import Customer
 from restaurant import Restaurant
 
 # making test cases
-c1 = Customer("Omar", "Ali")
-c2 = Customer("Will", "Smith")
+customer1 = Customer("Omar", "Ali")
+customer2 = Customer("Will", "Smith")
+customer3 = Customer ("Jumba", "Snr")
 
-r1 = Restaurant("Drip Burger")
-r2 = Restaurant("Pizza Hut")
+res1 = Restaurant("Drip Burger")
+res2 = Restaurant("Pizza Hut")
+res3 = Restaurant("Jaja")
 
-c1.add_review(r1, 4)
-c2.add_review(r1, 5)
-c2.add_review(r2, 3)
-
+customer1.add_review(res1, 4)
+customer2.add_review(res1, 5)
+customer2.add_review(res2, 3)
+customer3.add_review(res3, 5)
 
 # print("Customers:")
 # for customer in Customer.all_customers:
 #     print(customer.full_name())
 
 
-print("Restaurant Reviews:")
+# print("Restaurant Reviews:")
+# for restaurant in Restaurant.all_restaurants:
+#     print(f"{restaurant.name} Reviews:")
+#     for review in restaurant.reviews:
+#         customer_name = review.customer.full_name()
+#         rating = review.rating
+#         print(f"  - {customer_name}: {rating}")
+        
+
 for restaurant in Restaurant.all_restaurants:
-    print(f"{restaurant.name} Reviews:")
-    for review in restaurant.reviews:
-        customer_name = review.customer.full_name()
-        rating = review.rating
-        print(f"  - {customer_name}: {rating}")
+    print(f"{restaurant.name}")
