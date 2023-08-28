@@ -1,5 +1,6 @@
 from customer import Customer
 from restaurant import Restaurant
+from review import Review
 
 # making test cases
 customer1 = Customer("Omar", "Ali")
@@ -29,5 +30,10 @@ customer3.add_review(res3, 5)
 #         print(f"  - {customer_name}: {rating}")
         
 
-for restaurant in Restaurant.all_restaurants:
-    print(f"{restaurant.name}")
+# for restaurant in Restaurant.all_restaurants:
+#     print(f"{restaurant.name}")
+
+print("Special List of Customers and Their Reviewed Restaurants:")
+for customer in Customer.all_customers:
+    reviewed_restaurants = ", ".join([review.restaurant.name for review in customer.reviews])
+    print(f"{customer.full_name()} reviewed: {reviewed_restaurants}")

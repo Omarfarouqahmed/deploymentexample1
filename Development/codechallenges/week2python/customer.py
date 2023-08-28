@@ -1,6 +1,7 @@
 from restaurant import Restaurant
 from review import Review
 
+
 class Customer:
     all_customers = []
 # initializing the class
